@@ -5,7 +5,7 @@ class database {
     public function __construct()
     {
         try {
-            $this->bdd = new PDO('mysql:host=localhost;dbname=common-database;
+            $this->bdd = new PDO('mysql:host=localhost;dbname=tweet;
                 charset=utf8', 'root', '');
         }
         catch(Exception $e){
