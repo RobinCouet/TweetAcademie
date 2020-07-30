@@ -20,7 +20,7 @@ if (file_exists("controller/controller_". $controller . ".php")) {
 	} else {
 		include("controller/controller_error.php");
 	}
-} else if ($url === "") {
+} else if ($controller === "") {
 	include("controller/controller_home.php");
 	$page = new home();
 	$page->$method();
