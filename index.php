@@ -7,7 +7,11 @@ session_start();
 $params = $_GET['params'];
 $params = explode("/", $params);
 $controller = $params[0];
-$method = $params[1];
+if (!empty($params[1])) {
+	$method = $params[1];
+} else {
+	$method = 'connexion';
+}
 
 require('model/database.php');
 
